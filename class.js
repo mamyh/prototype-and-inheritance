@@ -38,7 +38,7 @@ class CricketerwithPerson extends Parentclass {
     play() {
         console.log(`${this.name} is playing`);
     }
-    eat() {
+    eat() {//this is polyMorphism.. overwriting anything from child class 
         super.eat();
         console.log(`${this.name} is eating rice`);
     }
