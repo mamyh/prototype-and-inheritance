@@ -1,4 +1,4 @@
-class Person {
+class Personanother {
     constructor(name, age) {
         this.name = name;
         this.age = age;
@@ -15,4 +15,26 @@ class Person {
 }
 
 console.log('this is from class ')
-console.dir(Person);
+console.dir(Personanother);
+//parent class
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    eat() {
+        console.log(`${this.name} is eating`);
+    }
+}
+//child clasls
+class Cricketer {
+    constructor(name, age, type, country) {
+        this.name = name;
+        this.age = age;
+        this.type = type;
+        this.country = country;
+    }
+    play() {
+        console.log(`${this.name} is playing`);
+    }
+}

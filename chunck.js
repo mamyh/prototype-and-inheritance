@@ -38,7 +38,7 @@ console.dir(arr);
 let f = function just() { };
 console.log('observation of function and object and prototype');
 console.dir(f);
-
+//Parent class
 function Person(name, age) {
     this.name = name;
     this.age = age;
@@ -48,7 +48,7 @@ Person.prototype = {
         console.log('person is eating');
     }
 }
-
+//Sub class 
 function Cricketer(name, age, type, country) {
     Person.call(this);
     this.name = name;
@@ -59,4 +59,8 @@ function Cricketer(name, age, type, country) {
 
 Cricketer.prototype = Object.create(Person.prototype)
 Cricketer.prototype.constructor = Cricketer;
+Cricketer.prototype.play = function () {
+    console.log(`${this.name}  is playing`);
+}
+
 console.dir(Cricketer);
