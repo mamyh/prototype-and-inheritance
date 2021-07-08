@@ -1,4 +1,4 @@
-const { isThisTypeNode } = require("typescript");
+
 
 Personwithnew.prototype = {
     eat() {
@@ -45,10 +45,10 @@ function Person(name, age) {
 }
 Person.prototype = {
     eat: function () {
-        console.log('person is eating');
+        console.log(this.name + ' is eating');
     }
 }
-//Sub class 
+//child class 
 function Cricketer(name, age, type, country) {
     Person.call(this);
     this.name = name;
@@ -62,5 +62,9 @@ Cricketer.prototype.constructor = Cricketer;
 Cricketer.prototype.play = function () {
     console.log(`${this.name}  is playing`);
 }
+
+let shakib = new Cricketer('shakib', 35, "allrounder", 'Bangladesh');
+shakib.play();
+shakib.eat();
 
 console.dir(Cricketer);

@@ -27,8 +27,9 @@ class Person {
     }
 }
 //child clasls
-class Cricketer {
+class Cricketer extends Person {
     constructor(name, age, type, country) {
+        super(name, age);
         this.name = name;
         this.age = age;
         this.type = type;
@@ -38,3 +39,7 @@ class Cricketer {
         console.log(`${this.name} is playing`);
     }
 }
+
+let shakib = new Cricketer('shakib', 35, "allrounder", 'Bangladesh');
+shakib.play();
+skakib.eat();
