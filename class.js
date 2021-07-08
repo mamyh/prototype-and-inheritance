@@ -38,6 +38,10 @@ class CricketerwithPerson extends Parentclass {
     play() {
         console.log(`${this.name} is playing`);
     }
+    eat() {
+        super.eat();
+        console.log(`${this.name} is eating rice`);
+    }
 }
 
 let shakib1 = new CricketerwithPerson('shakib', 35, "allrounder", 'Bangladesh');
