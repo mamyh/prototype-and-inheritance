@@ -60,8 +60,17 @@ class AnotherPerson {
         //setter 
         this.name = name;
     }
+    static isEqual(AnotherPerson1, AnotherPerson2) {
+        return AnotherPerson1.age === AnotherPerson2.age;
+    }
+    static thisCheck() {
+        return this.name;
+    }
 }
 let tamim = new AnotherPerson('tamim', 37);
+let mamun = new AnotherPerson('mamun', 23)
 tamim.setName = "sakib";
 
 console.log(tamim.setname);
+console.log(AnotherPerson.isEqual(tamim, mamun));
+console.log(AnotherPerson.thisCheck());
